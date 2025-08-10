@@ -159,7 +159,7 @@ const DocsPage = () => {
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Need Help?</h3>
             <p className="text-sm text-blue-700 dark:text-blue-300 mb-4">
-              Can't find what you're looking for? Our community is here to help.
+              Can&apos;t find what you&apos;re looking for? Our community is here to help.
             </p>
             <button className="w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors text-sm">
               Ask the Community

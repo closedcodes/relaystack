@@ -19,13 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`${inter.className} flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900`}>
         <ThemeProvider
           defaultTheme="system"
           storageKey="relaystack-theme"
         >
           <Header />
-          <main className="flex-grow container mx-auto p-4">{children}</main>
+          <main className="flex-grow container mx-auto px-4 py-6 md:py-8 max-w-7xl">
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

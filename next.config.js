@@ -1,15 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-  images: {
-    domains: ['localhost'],
-  },
-  // Enable strict mode for better development experience
-  reactStrictMode: true,
-  // Enable SWC minification for faster builds
-  swcMinify: true,
-}
+const {
+  default: next
+} = require("next");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+module.exports = nextConfig;

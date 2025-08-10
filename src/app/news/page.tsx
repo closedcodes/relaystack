@@ -1,28 +1,36 @@
-import { MainNav } from "@/components/main-nav"
-import { NewsFeed } from "@/components/news-feed"
-import { NewsFilters } from "@/components/news-filters"
+import ArticleCard from "@/components/ArticleCard";
 
-export default function NewsPage() {
+const articles = [
+  {
+    title: "The Future of AI in Software Development",
+    summary: "A look into how artificial intelligence is shaping the future of software engineering, from automated testing to AI-powered code generation.",
+    source: "TechCrunch",
+    date: "2025-08-10",
+    tags: ["AI", "Software Development", "Future Tech"],
+  },
+  {
+    title: "Getting Started with Next.js 15",
+    summary: "A comprehensive guide to the new features and improvements in Next.js 15, including the latest updates to the App Router and server components.",
+    source: "Vercel Blog",
+    date: "2025-08-09",
+    tags: ["Next.js", "Web Development", "JavaScript"],
+  },
+];
+
+const NewsPage = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <MainNav />
-      <main className="container mx-auto py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2">Tech News</h1>
-          <p className="text-muted-foreground">
-            AI-curated technology news and insights, updated in real-time
-          </p>
-        </div>
-        
-        <div className="grid lg:grid-cols-4 gap-8">
-          <aside className="lg:col-span-1">
-            <NewsFilters />
-          </aside>
-          <main className="lg:col-span-3">
-            <NewsFeed />
-          </main>
-        </div>
-      </main>
+    <div>
+      <h1 className="text-3xl font-bold mb-4">News</h1>
+      <div className="mb-4">
+        {/* Add filters and search bar here */}
+      </div>
+      <div className="space-y-4">
+        {articles.map((article, index) => (
+          <ArticleCard key={index} article={article} />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default NewsPage;
